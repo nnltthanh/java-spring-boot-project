@@ -81,7 +81,7 @@ public class UserService {
         }
         return null;
     }
-
+    //done - delete exist user
     public boolean deleteUser(Integer id) {
         repo.delete(findUserById(id));
         if (findUserById(id) == null){
