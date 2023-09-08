@@ -1,0 +1,164 @@
+[
+  {
+    "username": "johnsmith",
+    "password": "P@ssw0rd1"
+  },
+  {
+    "username": "alicejohnson",
+    "password": "Secure&Safe#2"
+  },
+  {
+    "username": "bobbrown",
+    "password": "SecretP@ssword3!"
+  },
+  {
+    "username": "emilydavis",
+    "password": "StrongP@ss4"
+  },
+  {
+    "username": "michaelwilson",
+    "password": "W1lson#P@ss"
+  },
+  {
+    "username": "samanthamartin",
+    "password": "M@rtin4Ever"
+  },
+  {
+    "username": "williamlee",
+    "password": "W1ll!@mL3e"
+  },
+  {
+    "username": "oliviajohnson",
+    "password": "0l1v!@#P@ss"
+  },
+  {
+    "username": "jamesbrown",
+    "password": "J@m3sP@ssw0rd"
+  },
+  {
+    "username": "sophialee",
+    "password": "S0ph!@#P@ss"
+  },
+  {
+    "username": "benjamindavis",
+    "password": "B3nJ@m!n#P@ss"
+  },
+  {
+    "username": "miawilson",
+    "password": "M!@#W!ls0nP@ss"
+  },
+  {
+    "username": "ethangarcia",
+    "password": "3th@nG@rc!@P@ss"
+  },
+  {
+    "username": "charlotteharris",
+    "password": "Ch@rl0t#P@ssw0rd"
+  },
+  {
+    "username": "liamanderson",
+    "password": "L!@m&P@ssw0rd"
+  },
+  {
+    "username": "avataylor",
+    "password": "T@yl0rP@ss!@#"
+  },
+  {
+    "username": "lucashernandez",
+    "password": "L#c@sP@ss123"
+  },
+  {
+    "username": "ameliayoung",
+    "password": "Y0ung&P@ss!"
+  },
+  {
+    "username": "henrymoore",
+    "password": "M00r3#P@ss"
+  },
+  {
+    "username": "ellaclark",
+    "password": "3ll@C!@rk#P@ss"
+  },
+
+    {
+      "username": "gracewilson",
+      "password": "P@ssw0rd21"
+    },
+    {
+      "username": "jacobtaylor",
+      "password": "Secure&Safe#22"
+    },
+    {
+      "username": "olivialopez",
+      "password": "SecretP@ssword23!"
+    },
+    {
+      "username": "samuelmartin",
+      "password": "StrongP@ss24"
+    },
+    {
+      "username": "victoranderson",
+      "password": "W1lson#P@ss25"
+    },
+    {
+      "username": "gracehernandez",
+      "password": "M@rtin4Ever26"
+    },
+    {
+      "username": "alexandercampbell",
+      "password": "W1ll!@mL3e27"
+    },
+    {
+      "username": "evelynjones",
+      "password": "0l1v!@#P@ss28"
+    },
+    {
+      "username": "sophiasmith",
+      "password": "J@m3sP@ssw0rd29"
+    },
+    {
+      "username": "danielbrown",
+      "password": "S0ph!@#P@ss30"
+    },
+    {
+      "username": "noraadams",
+      "password": "B3nJ@m!n#P@ss31"
+    },
+    {
+      "username": "williamscott",
+      "password": "M!@#W!ls0nP@ss32"
+    },
+    {
+      "username": "ameliahughes",
+      "password": "3th@nG@rc!@P@ss33"
+    },
+    {
+      "username": "mariasmith",
+      "password": "Ch@rl0t#P@ssw0rd34"
+    },
+    {
+      "username": "ethanhall",
+      "password": "L!@m&P@ssw0rd35"
+    },
+    {
+      "username": "oliviadavis",
+      "password": "T@yl0rP@ss!@#36"
+    },
+    {
+      "username": "williamjames",
+      "password": "L#c@sP@ss1237"
+    },
+    {
+      "username": "nathansmith",
+      "password": "Y0ung&P@ss!38"
+    },
+    {
+      "username": "emilysanchez",
+      "password": "M00r3#P@ss39"
+    },
+    {
+      "username": "danieladams",
+      "password": "3ll@C!@rk#P@ss40"
+    }
+
+]
