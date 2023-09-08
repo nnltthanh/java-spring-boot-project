@@ -1,8 +1,9 @@
 package project.backend.entity;
+
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
 @Component
 @Entity
 @Data
@@ -34,5 +35,4 @@ public class User {
     public String toString() {
         return id + "  -  " + username + "  -  " + password;
     }
-
 }
