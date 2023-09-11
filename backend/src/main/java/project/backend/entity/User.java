@@ -6,10 +6,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Entity
-@Data
+@Data //auto generate getter, setter, toString, hashCode, equals...
 @Table(name = "user")
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {
