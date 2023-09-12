@@ -6,6 +6,6 @@ import project.backend.entity.User;
 
 //communicate with database
 @Repository
-public interface UserDBReposity extends JpaRepository<User, Integer> {
-    public User findOneByUsername(String username) ;
+public interface UserDBRepository extends JpaRepository<User, Integer> {
+    User findOneByUsername(String username) ;
 }

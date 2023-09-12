@@ -1,29 +1,30 @@
 package project.backend.service;
 
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import project.backend.entity.Product;
-import project.backend.reposity.ProductDBReposity;
-
-import java.text.SimpleDateFormat;
+import project.backend.reposity.ProductDBRepository;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Optional;
 
 @Service
 public class ProductService {
     @Autowired
-    ProductDBReposity repo ; //access database
+    ProductDBRepository repo ; //access database
     private ArrayList<Product> products; //products list from database
     public ProductService(ArrayList<Product> products) {
         this.products = products;
     }
+
     public ProductService() {
-        this.products = new ArrayList<Product>();
+        this.products = new ArrayList<>();
     }
+
     public ArrayList<Product> getProducts() {
         return products;
     }
+
     public void setProducts(ArrayList<Product> products) {
         this.products = products;
     }
@@ -36,7 +37,7 @@ public class ProductService {
             System.out.println("Can not found product has id " + id);
             return null;
         }
-        else System.out.println(product.get().toString());
+        else System.out.println(product.get());
 
         return product.get(); //get ( ) -> Optional to Product
     }
@@ -50,6 +51,7 @@ public class ProductService {
         return products;
     }
 
+    @Transactional
     public Product addProduct(Product product) {
         if (repo.findOneByName(product.getName()) != null) {
             System.out.println("Product name has been exist");
@@ -58,13 +60,15 @@ public class ProductService {
             Product newProduct = repo.save(new Product(product)); //create new empty Product obj with id is generated
             this.products.add(newProduct);
             System.out.println("Call add Product function");
-            System.out.println(newProduct.toString());
+            System.out.println(newProduct);
 
             repo.save(newProduct);
             return newProduct;
         }
     }
 
+    //haven't done
+    @Transactional
     public Product updateProduct(Integer id, Product product) {
         System.out.println("Call update product function");
         Product temp = (Product) findProductById(id);
@@ -73,8 +77,7 @@ public class ProductService {
             if (findProductById(id).getName().equals(product.getName())) {
                 //update
 
-
-                System.out.println(temp.toString());
+                System.out.println(temp);
                 repo.save(temp);
                 return temp;
             } else {
@@ -86,11 +89,9 @@ public class ProductService {
         return null;
     }
 
+    @Transactional
     public boolean deleteProduct(Integer id) {
         repo.delete(findProductById(id));
-        if (findProductById(id) == null){
-            return true;
-        }
-        return false;
+        return findProductById(id) == null;
     }
 }

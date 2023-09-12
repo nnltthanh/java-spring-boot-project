@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
 import java.util.Calendar;
 import java.util.Date;
 
@@ -19,15 +18,18 @@ public class Product { //electronic product
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column
     private Integer id;
+
     @Column
     private String name;
     private int price; //original price
     private int officialPrice; //official price with promotion
     private int quantity;
+
     @OneToOne (cascade = CascadeType.ALL) //auto update when changing
     @JoinColumn(name = "productCode")
     @Autowired
     private ProductConfiguration configuration;
+
     private String producer;
     private String type;
     private Date updateDate;

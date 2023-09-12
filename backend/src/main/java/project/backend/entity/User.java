@@ -17,7 +17,7 @@ public class User {
     private Integer id;
     @Column
     private String username;
-    private  String password;
+    private String password;
 
     public User(User user) {
         this.username = user.username;
