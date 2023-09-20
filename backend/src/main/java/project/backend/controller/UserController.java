@@ -10,6 +10,8 @@ import project.backend.service.ProductService;
 import project.backend.service.UserService;
 
 @RestController
+// allow front-end cors
+@CrossOrigin(origins = "http://localhost:3001/")
 @RequestMapping("/u")
 public class UserController {
     @Autowired
@@ -36,6 +38,7 @@ public class UserController {
         }
         return "Call find user by ID " + id + " function\n" + userService.findUserById(id).toString();
     }
+
 
     @DeleteMapping("{id}")
     public String deleteUserById(@PathVariable Integer id) {
@@ -91,5 +94,20 @@ public class UserController {
             cartList += "\n" + cart;
         }
         return "Call get user cart has ID " + id + cartList;
+    }
+
+    //log - in
+    @PostMapping("/login")
+    public Integer loginUser(@RequestBody User user) {
+        User validUser = new User(userService.findUserByUsername(user.getUsername()));
+
+        if (validUser == null) {
+            System.out.println("Login information incorrect");
+            return null;
+        }
+
+        User resultUser = userService.findUserByUsername(validUser.getUsername());
+        System.out.println(resultUser);
+        return resultUser.getId();
     }
 }

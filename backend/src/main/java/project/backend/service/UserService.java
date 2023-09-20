@@ -49,6 +49,14 @@ public class UserService {
         return user.get(); //get ( ) -> Optional to User
     }
 
+    public User findUserByUsername(String username) {
+        Optional<User> user = userRepo.findOneByUsername(username);
+        if (user.isPresent()) {
+            return user.get();
+        }
+        return null;
+    }
+
     //done
     public ArrayList<User> findAllUser() {
         System.out.println("Call find all users function");
